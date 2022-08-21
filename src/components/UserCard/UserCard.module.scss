@@ -1,0 +1,13 @@
+.card-container {
+  margin: 60px auto 0 auto;
+  width: 95%;
+  height: 400px;
+  background-color: #4E14A7;
+  border-radius: 15px;
+  transition: .3s;
+  transform: scale(0);
+  .loader {
+    width: 50%;
+    margin: 200px auto 0 auto;
+  }
+}
