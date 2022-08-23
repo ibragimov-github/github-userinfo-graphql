@@ -6,11 +6,16 @@ import styles from './App.module.scss';
 type TypeApp = {}
 
 function App({ }: TypeApp) {
-  const [card, setCard] = useState(false);
+  const [card, setCard] = useState('');
   return (
     <div className={styles.container}>
-      <Search  setCard={setCard} />
-      <UserCard card={card} />
+      <Search
+        setCard={setCard}
+      />
+      <UserCard
+        setCard={setCard}
+        card={card}
+      />
     </div>
   );
 }

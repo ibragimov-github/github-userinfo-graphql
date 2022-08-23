@@ -2,13 +2,13 @@ import { useState } from 'react';
 import styles from './Search.module.scss';
 
 type TypeSearch = {
-  setCard: React.Dispatch<React.SetStateAction<boolean>>
+  setCard: React.Dispatch<React.SetStateAction<string>>
 }
 
 function Search({ setCard }: TypeSearch) {
   const [value, setValue] = useState('');
   const userSubbmit = (e: any) => {
-    if(e.key === 'Enter' && value.trim().length) setCard(true)
+    if(e.key === 'Enter' && value.trim().length) setCard('pushed')
   }
   return (
     <input
@@ -17,7 +17,7 @@ function Search({ setCard }: TypeSearch) {
       onKeyPress={userSubbmit}
       placeholder='Enter github username'
       value={value}
-      onChange={(e) => setValue(e.target.value)}
+      onChange={(e) => setValue(e.target.value.toLowerCase())}
     />
   );
 }
