@@ -42,6 +42,8 @@ function UserCard({ subbmit, card, setCard }: TypeUserCard) {
           src={data.user.avatarUrl}
           alt=""
           className={styles.photo}
+          width='100px'
+          height='100px'
         />
         <span
           className={styles.bio}
