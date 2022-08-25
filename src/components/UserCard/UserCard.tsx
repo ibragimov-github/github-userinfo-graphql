@@ -45,14 +45,16 @@ function UserCard({ subbmit, card, setCard }: TypeUserCard) {
           width='100px'
           height='100px'
         />
-        <span
+        <div
           className={styles.bio}
         >
-          Bio : {data.user.bio ? data.user.bio : 'no data'}
-        </span>
-        <span className={styles.location}>
-          City: {data.user.location ? data.user.location : 'no data'}
-        </span>
+          <div className={styles['bio-logo']}></div>
+          <span>{data.user.bio ? data.user.bio : 'no data'}</span>
+        </div>
+        <div className={styles.location}>
+          <div className={styles['location-logo']}></div>
+          <div>{data.user.location ? data.user.location : 'no data'}</div>
+        </div>
         <div className={styles['repo-container']}>
           {data.user.repositories.edges.map((repo: any) => {
             return (
