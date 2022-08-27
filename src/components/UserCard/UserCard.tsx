@@ -22,7 +22,6 @@ function UserCard({ subbmit, card, setCard }: TypeUserCard) {
   }
   if (data && subbmit.trim().length) {
     setCard('done')
-    console.log(data)
   }
   if (error && subbmit.trim().length) {
     setCard('error')
@@ -38,13 +37,17 @@ function UserCard({ subbmit, card, setCard }: TypeUserCard) {
         className={styles['card-container']}
         style={style}
       >
-        <img
-          src={data.user.avatarUrl}
-          alt=""
+        <a
+          href={data.user.url}
           className={styles.photo}
-          width='100px'
-          height='100px'
-        />
+          target='_blank'
+          style={{
+            background: `url(${data.user.avatarUrl}) no-repeat no-repeat`,
+            backgroundSize: 'contain'
+          }}
+        >
+
+        </a>
         <div
           className={styles.bio}
         >

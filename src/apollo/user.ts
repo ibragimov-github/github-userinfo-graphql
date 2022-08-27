@@ -6,6 +6,7 @@ export const USER_INFO = gql`
     avatarUrl
     bio
     location
+    url
     repositories(last: 4) {
       edges {
         node {
